@@ -2,14 +2,8 @@
 @import "helper/_placeholder.scss";
 
 .ready-play {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  @extend %vertikal-center;
   text-align: center;
-
   h2 {
     color: #fff;
     @extend %font-style;

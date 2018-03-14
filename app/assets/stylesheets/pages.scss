@@ -16,4 +16,9 @@ header {
     @extend %font-style;
     font-weight: 500;
   }
+
+  hr{
+    width: $standard_width;
+    background-color: white;
+  }
 }

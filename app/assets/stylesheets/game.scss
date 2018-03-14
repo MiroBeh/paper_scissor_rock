@@ -1,0 +1,37 @@
+@import "helper/_variables.scss";
+@import "helper/_placeholder.scss";
+
+.game-center{
+  @extend %vertikal-center;
+
+  h2 {
+    text-align: center;
+    color: #fff;
+    @extend %font-style;
+  }
+}
+
+.flex-game-input {
+  display: flex;
+  justify-content: center;
+
+  .item {
+    margin: 20px;
+    border: 5px solid #fff;
+    border-radius: 108.5px;
+    padding-left: 3.5px;
+    padding-right: 3.5px;
+    @extend %standard-transition;
+    svg {
+      padding: 25px;
+    }
+  }
+  .player-item {
+    &:hover{
+      background-color: white;
+      .game-icons path {
+        fill: $standard_color;
+      }
+    }
+  }
+}
