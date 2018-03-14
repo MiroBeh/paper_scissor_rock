@@ -1,0 +1,28 @@
+@import "helper/_variables.scss";
+@import "helper/_placeholder.scss";
+
+.ready-play {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+
+  h2 {
+    color: #fff;
+    @extend %font-style;
+  }
+  button {
+    margin-top: 13px;
+    color: #fff;
+    background-color: $standard_color;
+    border-color: #fff;
+    @extend %standard-transition;
+    &:hover {
+      color: $standard_color;
+      background-color: #fff;
+    }
+  }
+}

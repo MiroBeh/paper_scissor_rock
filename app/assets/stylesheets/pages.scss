@@ -1,0 +1,19 @@
+@import "helper/_placeholder.scss";
+@import "helper/_variables.scss";
+
+body {
+  background: $standard_color;
+}
+
+header {
+  .flex-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  p {
+    color: #fff;
+    @extend %font-style;
+    font-weight: 500;
+  }
+}
