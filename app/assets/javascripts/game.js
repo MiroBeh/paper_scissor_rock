@@ -16,7 +16,7 @@ function paper() {
         $("#paper-com").css("fill", "#1DA1F2");
         $("#paper-div-com").css("background-color", "white");
         setTimeout(function(){
-          console.log("nobody won!");
+          $("#result").html("Nobody won!");
         }, 1000);
       }, 1000);
     } else if (comPicks == "scissor") {
@@ -24,8 +24,10 @@ function paper() {
         $("#scissor-com").css("fill", "#1DA1F2");
         $("#scissor-div-com").css("background-color", "white");
         setTimeout(function(){
-          console.log("You lose!");
+          $("#result").html("You lose!");
           comStats += 1;
+          $("#your-state").html(playerStats);
+          $("#computer-state").html(comStats);
         }, 1000);
       }, 1000);
     } else {
@@ -33,11 +35,16 @@ function paper() {
         $("#rock-com").css("fill", "#1DA1F2");
         $("#rock-div-com").css("background-color", "white");
         setTimeout(function(){
-          console.log("You won!");
+          $("#result").html("You won!");
           playerStats +=1;
+          $("#your-state").html(playerStats);
+          $("#computer-state").html(comStats);
         }, 1000);
       }, 1000);
     }
+    setTimeout(function() {
+      $("#result-div").css("display","inline-block");
+    }, 2300);
   }
 }
 
@@ -52,8 +59,10 @@ function scissor() {
         $("#paper-com").css("fill", "#1DA1F2");
         $("#paper-div-com").css("background-color", "white");
         setTimeout(function(){
-          console.log("You won!");
+          $("#result").html("You won!");
           playerStats +=1;
+          $("#your-state").html(playerStats);
+          $("#computer-state").html(comStats);
         }, 1000);
       }, 1000);
     } else if (comPicks == "scissor") {
@@ -61,7 +70,9 @@ function scissor() {
         $("#scissor-com").css("fill", "#1DA1F2");
         $("#scissor-div-com").css("background-color", "white");
         setTimeout(function(){
-          console.log("nobody won!");
+          $("#result").html("Nobody won!");
+          $("#your-state").html(playerStats);
+          $("#computer-state").html(comStats);
         }, 1000);
       }, 1000);
     } else {
@@ -69,11 +80,16 @@ function scissor() {
         $("#rock-com").css("fill", "#1DA1F2");
         $("#rock-div-com").css("background-color", "white");
         setTimeout(function(){
-          console.log("You lose!");
+          $("#result").html("You lose!");
           comStats += 1;
+          $("#your-state").html(playerStats);
+          $("#computer-state").html(comStats);
         }, 1000);
       }, 1000);
     }
+    setTimeout(function() {
+      $("#result-div").css("display","inline-block");
+    }, 2300);
   }
 }
 
@@ -88,8 +104,10 @@ function rock() {
         $("#paper-com").css("fill", "#1DA1F2");
         $("#paper-div-com").css("background-color", "white");
         setTimeout(function(){
-          console.log("You lose!");
+          $("#result").html("You lose!");
           comStats += 1;
+          $("#your-state").html(playerStats);
+          $("#computer-state").html(comStats);
         }, 1000);
       }, 1000);
     } else if (comPicks == "scissor") {
@@ -97,8 +115,10 @@ function rock() {
         $("#scissor-com").css("fill", "#1DA1F2");
         $("#scissor-div-com").css("background-color", "white");
         setTimeout(function(){
-          console.log("you won!");
+          $("#result").html("You won!");
           playerStats +=1;
+          $("#your-state").html(playerStats);
+          $("#computer-state").html(comStats);
         }, 1000);
       }, 1000);
     } else {
@@ -106,10 +126,13 @@ function rock() {
         $("#rock-com").css("fill", "#1DA1F2");
         $("#rock-div-com").css("background-color", "white");
         setTimeout(function(){
-          console.log("nobody won!");
+          $("#result").html("Nobody won!");
         }, 1000);
       }, 1000);
     }
+    setTimeout(function() {
+      $("#result-div").css("display","inline-block");
+    }, 2300);
   }
 }
 
@@ -122,5 +145,18 @@ function randomNumber() {
 
 function newRound() {
   oneClick = false;
-  console.log("functioniert")
+  $("#result-div").css("display", "none");
+  $(".item-path").css("fill", "white");
+  $(".item").css("background-color","#1DA1F2");
+}
+
+function newSession() {
+  oneClick = false;
+  $("#result-div").css("display", "none");
+  $(".item-path").css("fill", "white");
+  $(".item").css("background-color","#1DA1F2");
+  playerStats = 0;
+  comStats = 0;
+  $("#your-state").html(playerStats);
+  $("#computer-state").html(comStats);
 }

@@ -11,14 +11,25 @@ header {
     justify-content: space-between;
   }
 
+  .logo-image {
+    margin-left: 5%;
+    padding-top: 10px;
+    @media only screen and (max-width: 440px) {
+      margin-left: 0;
+    }
+  }
+
   p {
     color: #fff;
     @extend %font-style;
     font-weight: 500;
+    text-align: right;
+    margin-right: 5%;
   }
 
   hr{
     width: $standard_width;
     background-color: white;
+    margin-top: 0px;
   }
 }
